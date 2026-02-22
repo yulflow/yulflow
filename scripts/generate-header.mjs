@@ -9,20 +9,20 @@ function seededRandom(seed) {
 }
 
 const rand = seededRandom(42);
-const NUM_BARS = 100;
+const NUM_BARS = 120;
 const SVG_WIDTH = 840;
-const SVG_HEIGHT = 220;
-const BAR_WIDTH = 2.8;
-const MAX_BAR_HEIGHT = 90;
-const BAR_Y = 185;
+const SVG_HEIGHT = 160;
+const BAR_WIDTH = 2.4;
+const MAX_BAR_HEIGHT = 110;
+const BAR_Y = 145;
 
 const bars = [];
 for (let i = 0; i < NUM_BARS; i++) {
   const t = i / (NUM_BARS - 1);
-  const bell = Math.exp(-Math.pow((t - 0.5) * 3.2, 2));
-  const rhythm = 0.5 + 0.5 * Math.sin(t * Math.PI * 14);
-  const noise = 0.35 + 0.65 * rand();
-  const height = Math.max(5, Math.floor(MAX_BAR_HEIGHT * bell * rhythm * noise));
+  const bell = Math.exp(-Math.pow((t - 0.5) * 2.8, 2));
+  const rhythm = 0.5 + 0.5 * Math.sin(t * Math.PI * 16);
+  const noise = 0.3 + 0.7 * rand();
+  const height = Math.max(4, Math.floor(MAX_BAR_HEIGHT * bell * rhythm * noise));
   const gap = (SVG_WIDTH - NUM_BARS * BAR_WIDTH) / (NUM_BARS + 1);
   const x = gap + i * (BAR_WIDTH + gap);
   bars.push({ x, height });
@@ -30,23 +30,21 @@ for (let i = 0; i < NUM_BARS; i++) {
 
 function createSVG(theme) {
   const isDark = theme === "dark";
-  const textColor = isDark ? "#e6edf3" : "#1f2328";
-  const subtitleColor = isDark ? "#7d8590" : "#656d76";
+  const handleColor = isDark ? "#484f58" : "#b1bac4";
   const color1 = isDark ? "#58a6ff" : "#0969da";
   const color2 = isDark ? "#bc8cff" : "#8250df";
 
-  // Two layers: background glow + foreground bars
   const glowBars = bars
     .map(
       ({ x, height }) =>
-        `    <rect x="${(x - 1).toFixed(1)}" y="${BAR_Y - height - 2}" width="${BAR_WIDTH + 2}" height="${height + 4}" fill="url(#waveGrad)" rx="2" opacity="0.08"/>`
+        `    <rect x="${(x - 1.5).toFixed(1)}" y="${BAR_Y - height - 3}" width="${BAR_WIDTH + 3}" height="${height + 6}" fill="url(#waveGrad)" rx="2.5" opacity="0.06"/>`
     )
     .join("\n");
 
   const mainBars = bars
     .map(
       ({ x, height }) =>
-        `    <rect x="${x.toFixed(1)}" y="${BAR_Y - height}" width="${BAR_WIDTH}" height="${height}" fill="url(#waveGrad)" rx="1.4" opacity="0.4"/>`
+        `    <rect x="${x.toFixed(1)}" y="${BAR_Y - height}" width="${BAR_WIDTH}" height="${height}" fill="url(#waveGrad)" rx="1.2" opacity="0.45"/>`
     )
     .join("\n");
 
@@ -59,26 +57,20 @@ function createSVG(theme) {
     </linearGradient>
   </defs>
 
-  <!-- Glow layer -->
+  <!-- Glow -->
   <g>
 ${glowBars}
   </g>
 
-  <!-- Main bars -->
+  <!-- Bars -->
   <g>
 ${mainBars}
   </g>
 
-  <!-- Name -->
-  <text x="${SVG_WIDTH / 2}" y="75" text-anchor="middle" fill="${textColor}"
-    font-family="'SF Mono','Fira Code','Cascadia Code',monospace" font-size="38" font-weight="700" letter-spacing="8">
-    SEOYUL SON
-  </text>
-
-  <!-- Subtitle -->
-  <text x="${SVG_WIDTH / 2}" y="112" text-anchor="middle" fill="${subtitleColor}"
-    font-family="'SF Mono','Fira Code','Cascadia Code',monospace" font-size="13" letter-spacing="4">
-    MUSICIAN × AI DEVELOPER
+  <!-- Handle -->
+  <text x="${SVG_WIDTH / 2}" y="${SVG_HEIGHT - 4}" text-anchor="middle" fill="${handleColor}"
+    font-family="'SF Mono','Fira Code','Cascadia Code',monospace" font-size="11" letter-spacing="3">
+    yulflow
   </text>
 </svg>`;
 }

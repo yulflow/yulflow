@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg" />
-    <img alt="Seoyul Son" src="./assets/header-dark.svg" width="840" />
+    <img alt="yulflow" src="./assets/header-dark.svg" width="840" />
   </picture>
 </div>
 
@@ -17,13 +17,6 @@
   ![Supabase](https://img.shields.io/badge/Supabase-000?style=flat-square&logo=supabase)
   ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=flat-square&logo=postgresql&logoColor=fff)
 
-</div>
-
-<br />
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yulflow&show_icons=true&theme=transparent&hide_border=true&title_color=58a6ff&icon_color=bc8cff&text_color=7d8590&ring_color=58a6ff" height="165" />
-  <img src="https://streak-stats.demolab.com/?user=yulflow&theme=transparent&hide_border=true&ring=58a6ff&fire=bc8cff&currStreakLabel=58a6ff&sideLabels=7d8590&dates=7d8590&currStreakNum=e6edf3&sideNums=e6edf3" height="165" />
 </div>
 
 <br />
