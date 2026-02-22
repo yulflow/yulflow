@@ -1,12 +1,4 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg" />
-    <img alt="yulflow" src="./assets/header-dark.svg" width="840" />
-  </picture>
-</div>
-
-<br />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,30:58a6ff,70:bc8cff,100:1a1b27&height=200&section=header&text=&fontSize=0" width="100%" />
 
 <div align="center">
 
@@ -26,3 +18,5 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yulflow/yulflow/output/github-snake.svg" />
   <img alt="Snake animation" src="https://raw.githubusercontent.com/yulflow/yulflow/output/github-snake-dark.svg" width="100%" />
 </picture>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,30:bc8cff,70:58a6ff,100:1a1b27&height=120&section=footer&text=&fontSize=0" width="100%" />
