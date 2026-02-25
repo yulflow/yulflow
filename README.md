@@ -1,6 +1,6 @@
-<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:111,50:333,100:111&height=1" width="100%" />
 
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=12,2,30&height=120&text=&fontSize=0" width="100%" />
+<div align="center">
 
 ### Building things with AI agents and music.
 
@@ -26,9 +26,9 @@
 
 <div align="center">
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=yulflow&show_icons=true&theme=transparent&hide_border=true&hide_title=true&text_color=888&icon_color=58a6ff)](https://github.com/yulflow)
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=yulflow&show_icons=true&theme=graywhite&hide_border=true&hide_title=true)](https://github.com/yulflow)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yulflow&layout=compact&theme=transparent&hide_border=true&hide_title=true&text_color=888)](https://github.com/yulflow)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yulflow&layout=compact&theme=graywhite&hide_border=true&hide_title=true)](https://github.com/yulflow)
 
 </div>
 
