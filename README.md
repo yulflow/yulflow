@@ -1,3 +1,5 @@
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b27,50:58a6ff,100:1a1b27&height=2" width="100%" />
+
 <div align="center">
 
 ### Building things with AI agents and music.
