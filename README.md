@@ -2,6 +2,10 @@
 
 <div align="center">
 
+  **Building things with AI agents and music.**
+
+  <br />
+
   ![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=fff)
   ![React](https://img.shields.io/badge/React-000?style=flat-square&logo=react)
   ![TypeScript](https://img.shields.io/badge/TypeScript-000?style=flat-square&logo=typescript)
