@@ -1,6 +1,6 @@
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1b27,50:58a6ff,100:1a1b27&height=2" width="100%" />
-
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=12,2,30&height=150&text=yulflow&fontSize=40&fontColor=fff&fontAlignY=55" width="100%" />
 
 ### Building things with AI agents and music.
 
