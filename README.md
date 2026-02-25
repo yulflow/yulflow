@@ -10,7 +10,7 @@
 
 - AI-assisted solo developer
 - M.A. student, MARTE @ Dongguk University
-- Musician & music educator since 1997
+- Musician & music educator
 
 #### Stack
 
