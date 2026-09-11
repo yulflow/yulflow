@@ -5,7 +5,6 @@ Composer and sound artist. Not a developer by training: directs AI agents (Claud
 <img src="assets/selected-work.svg" alt="Selected work · sound, web" width="100%">
 
 **〈Dystopia · Dissolved Sounds〉** · a sound-art exhibition · [dissolvedsound.com](https://dissolvedsound.com)<br>
-**[seeingsound-listningemage2026](https://github.com/yulflow/seeingsound-listningemage2026)** · Seeing Sound, Listening Image · exhibition project<br>
 **[esther-main](https://esther-main.vercel.app)** · the academy's site: vocal, piano, MIDI composition, entrance-exam prep<br>
 **[seoyulson-portfolio](https://github.com/yulflow/seoyulson-portfolio)** · portfolio site source · [live](https://seoyulson-portfolio.vercel.app)
 
