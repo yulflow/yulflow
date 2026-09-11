@@ -189,7 +189,6 @@ HERO_W, HERO_H = 880, 300
 
 
 def build_hero() -> str:
-    meta = "SEOUL · MARTE, DONGGUK UNIV. · ESTHER MUSIC ACADEMY"
     role = "COMPOSER · SOUND ARTIST · BUILDS WITH AI AGENTS"
     wave_y = 250.0
 
@@ -233,11 +232,6 @@ def build_hero() -> str:
         f'    <circle cx="777" cy="37.3" r="2.4" fill="{ACCENT}"/>\n',
         "  </g>\n",
     ]
-
-    # 상단 메타 행
-    s.append(f'  <rect x="48" y="38.5" width="4" height="4" fill="{MINERAL}"/>\n')
-    s.append(t("mono", meta, 12.5, 62, 45, INK_FAINT, tracking=2.6))
-    s.append(f'  <line x1="48" y1="66.5" x2="832" y2="66.5" stroke="{HAIR}" stroke-width="1"/>\n')
 
     # 이름
     s.append(t("display", "Seoyul Son", 92, 46, 152, INK))
@@ -303,42 +297,16 @@ def build_section(title: str, right: list[tuple[str, str]], label: str) -> str:
 CLOSE_W, CLOSE_H = 880, 152
 
 
-def build_closing() -> str:
-    l1 = "Machines hold the memory and run the repetition."
-    l2 = "The judgment, the taste, the responsibility · mine."
-    label = "Machines hold the memory and run the repetition. " \
-            "The judgment, the taste, the responsibility · mine. Seoul."
-    s = [
-        f'<svg viewBox="0 0 {CLOSE_W} {CLOSE_H}" width="{CLOSE_W}" height="{CLOSE_H}"'
-        f' xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{label}">\n',
-        f"  <title>{label}</title>\n",
-        f'  <clipPath id="cframe"><rect x="0" y="0" width="{CLOSE_W}" height="{CLOSE_H}"/></clipPath>\n',
-        f'  <rect x="0" y="0" width="{CLOSE_W}" height="{CLOSE_H}" fill="{BG}"/>\n',
-        '  <g clip-path="url(#cframe)">\n',
-        rings([(828, 76, 92, ""), (896, 76, 92, "")]),
-        "  </g>\n",
-        f'  <line x1="56" y1="0" x2="56" y2="{CLOSE_H}" stroke="{HAIR}" stroke-width="1"/>\n',
-    ]
-    s.append(t("italic", l1, 28, 80, 66, INK_DIM))
-    s.append(t("italic", l2, 28, 80, 104, INK))
-    s.append(t("mono", "SEOUL.", 12.5, 832, 132, INK_FAINT, tracking=3.0, anchor="end"))
-    s.append(f'  <rect x="0.5" y="0.5" width="{CLOSE_W - 1}" height="{CLOSE_H - 1}" fill="none"'
-             f' stroke="{HAIR}" stroke-width="1"/>\n')
-    s.append("</svg>\n")
-    return "".join(s)
-
-
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     files = {
         "hero.svg": build_hero(),
         "selected-work.svg": build_section(
-            "SELECTED WORK", [("mono", "SOUND · TEACHING · RESEARCH")],
+            "SELECTED WORK", [("mono", "SOUND · WEB")],
             "Selected work · sound, teaching, research"),
         "stack.svg": build_section(
             "STACK", [("mono", "BUILD · DIRECT · MAKE")],
             "Stack · build, direct, make"),
-        "closing.svg": build_closing(),
     }
     total = 0
     for name, body in files.items():
